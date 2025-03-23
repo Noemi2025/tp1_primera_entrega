@@ -42,8 +42,8 @@ for _ in range(3):
  # Se combina las preguntas, respuestas y respuestas correctas en una lista
 combined_questions = list(zip(questions, answers, correct_answers_index))
 
-# Se seleccionan 3 preguntas aleatorias de la lista de preguntas
-questions_to_ask = random.choices(combined_questions, k=3)
+# Se seleccionan 3 preguntas aleatorias de la lista de preguntas sin repeticiones
+questions_to_ask = random.sample(combined_questions, 3)
 
 # El usuario deberá contestar 3 preguntas
 for question, possible_answers, correct_index in questions_to_ask:
